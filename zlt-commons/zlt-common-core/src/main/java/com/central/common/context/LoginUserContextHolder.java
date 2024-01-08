@@ -5,6 +5,7 @@ import com.central.common.model.LoginAppUser;
 
 /**
  * 登录用户holder
+ * 在zlt-common-spring-boot-starter中，基于拦截器进行赋值
  *
  * @author zlt
  * @date 2022/6/26

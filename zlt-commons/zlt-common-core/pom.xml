@@ -62,11 +62,13 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- 基于Taobao Text的旗标生成器，可以移除 -->
         <dependency>
             <groupId>com.nepxion</groupId>
             <artifactId>banner</artifactId>
         </dependency>
 
+        <!-- 响应式编程 -->
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-core</artifactId>

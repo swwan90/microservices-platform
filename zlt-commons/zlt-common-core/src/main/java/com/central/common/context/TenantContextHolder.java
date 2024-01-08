@@ -4,6 +4,7 @@ import com.alibaba.ttl.TransmittableThreadLocal;
 
 /**
  * 租户holder
+ * 在zlt-common-spring-boot-starter中，基于拦截器进行赋值
  *
  * @author zlt
  * @date 2019/8/5
