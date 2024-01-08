@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <trees>
+     <tree path="/zlt-business" title="业务模块"/>
+     <tree path="/zlt-commons" title="通用工具"/>
+     <tree path="/zlt-config" title="配置中心"/>
+     <tree path="/zlt-demo" title="示例工程"/>
+     <tree path="/zlt-doc" title="项目文档" extension="" presentableText="" tooltipTitle="" icon="" textColor=""
+           backgroundColor=""/>
+     <tree path="/zlt-gateway" title="业务网关"/>
+     <tree path="/zlt-monitor" title="监控中心"/>
+     <tree path="/zlt-register" title="注册中心"/>
+     <tree path="/zlt-uaa" title="认证中心"/>
+     <tree path="/zlt-web" title="前端工程"/>
+    <tree path="/zlt-monitor/log-center" title="日志中心"/>
+    <tree path="/zlt-monitor/sc-admin" title="应用监控"/>
+    <tree path="/zlt-commons/zlt-auth-client-spring-boot-starter" title="封装spring security client端的通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-common-core" title="封装通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-common-spring-boot-starter" title="封装通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-db-spring-boot-starter" title="封装数据库通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-log-spring-boot-starter" title="封装log通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-redis-spring-boot-starter" title="封装Redis通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-loadbalancer-spring-boot-starter" title="封装Loadbalancer和Feign的通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-sentinel-spring-boot-starter" title="封装Sentinel的通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-elasticsearch-spring-boot-starter" title="封装Elasticsearch通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-oss-spring-boot-starter" title="封装对象存储通用操作逻辑"/>
+    <tree path="/zlt-commons/zlt-zookeeper-spring-boot-starter" title="封装Zookeeper通用操作逻辑"/>
+    <tree path="/zlt-business/user-center" title="用户中心"/>
+    <tree path="/zlt-business/file-center" title="文件中心"/>
+    <tree path="/zlt-business/code-generator" title="代码生成器"/>
+    <tree path="/zlt-business/search-center" title="搜索中心"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/constant" title="常量"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/context" title="线程本地变量"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/datascope/mp" title="MP数据权限"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/enums" title="枚举类"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/exception" title="统一异常处理"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/feign" title="RPC及降级"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/feign/UserService.java"
+          title="用户权限服务接口"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/lock" title="分布式锁注解"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/passwordEncoder" title="加解密"/>
+    <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/service"
+          title="Service顶级接口及默认实现"/>
+</trees>

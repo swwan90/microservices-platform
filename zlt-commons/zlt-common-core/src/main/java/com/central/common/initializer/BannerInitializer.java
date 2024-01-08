@@ -1,4 +1,4 @@
-package com.central.common.config;
+package com.central.common.initializer;
 
 import com.central.common.constant.CommonConstant;
 import com.central.common.utils.CustomBanner;
@@ -12,6 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 /**
  * Banner初始化
+ * SpringApplication#initialize方法，在其构造函数内执行，从而确保在其run方法之前完成
  *
  * @author zlt
  * @date 2019/8/28

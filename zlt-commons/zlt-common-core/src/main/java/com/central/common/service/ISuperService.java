@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.central.common.lock.DistributedLock;
 
 /**
- * service接口父类
+ * service接口父类，增强MP的IService接口
  *
  * @author zlt
  * @date 2019/1/10

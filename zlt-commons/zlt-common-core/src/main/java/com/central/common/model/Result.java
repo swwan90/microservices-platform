@@ -1,5 +1,6 @@
 package com.central.common.model;
 
+import com.central.common.enums.CodeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

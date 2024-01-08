@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 自定义 Banner
+ *
  * @author zlt
  * @date 2019/8/28
  */

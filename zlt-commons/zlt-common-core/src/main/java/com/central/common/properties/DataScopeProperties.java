@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 示例
+ * 数据权限配置
  *
  * @author jarvis create by 2023/1/8
  */
