@@ -1,5 +1,7 @@
 package com.central.log.aspect;
 
+import cn.hutool.extra.expression.ExpressionUtil;
+import cn.hutool.extra.expression.engine.spel.SpELEngine;
 import com.central.log.annotation.AuditLog;
 import com.central.log.model.Audit;
 import com.central.log.properties.AuditLogProperties;
@@ -22,6 +24,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 /**
  * 审计日志切面
@@ -32,14 +35,14 @@ import java.time.LocalDateTime;
  * Blog: http://zlt2000.gitee.io
  * Github: https://github.com/zlt2000
  */
+@SuppressWarnings("all")
 @Slf4j
 @Aspect
-@Component
 @ConditionalOnClass({HttpServletRequest.class, RequestContextHolder.class})
 public class AuditLogAspect {
+
     @Value("${spring.application.name}")
     private String applicationName;
-
     private AuditLogProperties auditLogProperties;
     private IAuditService auditService;
 
@@ -51,11 +54,11 @@ public class AuditLogAspect {
     /**
      * 用于SpEL表达式解析.
      */
-    private SpelExpressionParser spelExpressionParser = new SpelExpressionParser();
+    private final SpelExpressionParser spelExpressionParser = new SpelExpressionParser();
     /**
      * 用于获取方法参数定义名字.
      */
-    private DefaultParameterNameDiscoverer nameDiscoverer = new DefaultParameterNameDiscoverer();
+    private final DefaultParameterNameDiscoverer nameDiscoverer = new DefaultParameterNameDiscoverer();
 
     @Before("@within(auditLog) || @annotation(auditLog)")
     public void beforeMethod(JoinPoint joinPoint, AuditLog auditLog) {
@@ -65,6 +68,7 @@ public class AuditLogAspect {
                 log.warn("AuditLogAspect - auditService is null");
                 return;
             }
+            // 方法上的注解
             if (auditLog == null) {
                 // 获取类上的注解
                 auditLog = joinPoint.getTarget().getClass().getDeclaredAnnotation(AuditLog.class);
@@ -75,7 +79,7 @@ public class AuditLogAspect {
     }
 
     /**
-     * 解析spEL表达式
+     * 解析spEL表达式。抽取出来，作为共通
      */
     private String getValBySpEL(String spEL, MethodSignature methodSignature, Object[] args) {
         //获取方法形参名数组
@@ -88,7 +92,7 @@ public class AuditLogAspect {
             for(int i = 0; i < args.length; i++) {
                 context.setVariable(paramNames[i], args[i]);
             }
-            return expression.getValue(context).toString();
+            return Objects.requireNonNull(expression.getValue(context)).toString();
         }
         return null;
     }

@@ -7,6 +7,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
  * 审计日志配置
+ * 在yml中进行配置
  *
  * @author zlt
  * @date 2020/2/3
@@ -16,7 +17,9 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  */
 @Setter
 @Getter
+// 自定义配置
 @ConfigurationProperties(prefix = "zlt.audit-log")
+// 动态刷新Bean中的属性配置
 @RefreshScope
 public class AuditLogProperties {
     /**

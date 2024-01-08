@@ -1,1 +1,2 @@
 com.central.log.LogAutoConfigure
+com.central.log.aspect.AuditLogAspect

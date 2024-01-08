@@ -3,6 +3,8 @@ package com.central.log.annotation;
 import java.lang.annotation.*;
 
 /**
+ * 审计日志注解
+ *
  * @author zlt
  * @date 2020/2/3
  * <p>

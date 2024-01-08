@@ -32,7 +32,7 @@ public class PointUtil {
 
     @Setter
     @Getter
-    private class PointEntry {
+    private static class PointEntry {
         String id;
         String type;
         Object properties;
