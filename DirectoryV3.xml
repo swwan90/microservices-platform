@@ -40,4 +40,7 @@
     <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/passwordEncoder" title="加解密"/>
     <tree path="/zlt-commons/zlt-common-core/src/main/java/com/central/common/service"
           title="Service顶级接口及默认实现"/>
+    <tree path="/zlt-commons/zlt-log-spring-boot-starter/src/main/resources/META-INF/dubbo/com.alibaba.dubbo.rpc.Filter"
+          title="Dubbo的SPI机制" extension="" presentableText="" tooltipTitle="" icon="" textColor=""
+          backgroundColor=""/>
 </trees>

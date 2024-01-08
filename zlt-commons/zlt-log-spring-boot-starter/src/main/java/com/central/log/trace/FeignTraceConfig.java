@@ -30,6 +30,7 @@ public class FeignTraceConfig {
             if (traceProperties.getEnable()) {
                 //传递日志traceId
                 String traceId = MDCTraceUtils.getTraceId();
+                //设置到HTTP请求头
                 if (StrUtil.isNotEmpty(traceId)) {
                     template.header(MDCTraceUtils.TRACE_ID_HEADER, traceId);
                     template.header(MDCTraceUtils.SPAN_ID_HEADER, MDCTraceUtils.getNextSpanId());
