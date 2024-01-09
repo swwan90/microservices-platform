@@ -122,7 +122,7 @@ public class SysUserController {
      */
     @PutMapping("/users")
     @CachePut(value = "user", key = "#sysUser.username", unless="#result == null")
-    //@AuditLog(operation = "'更新用户:' + #sysUser")
+    @AuditLog(operation = "'更新用户:' + #sysUser")
     public void updateSysUser(@RequestBody SysUser sysUser) {
         appUserService.updateById(sysUser);
     }
