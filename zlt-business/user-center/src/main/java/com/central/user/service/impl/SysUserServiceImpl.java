@@ -16,6 +16,7 @@ import com.central.user.model.SysRoleUser;
 import com.central.user.model.SysUserExcel;
 import com.central.user.mapper.SysUserMapper;
 import com.central.user.service.ISysRoleUserService;
+import com.yomahub.tlog.core.annotation.TLogAspect;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -181,7 +182,9 @@ public class SysUserServiceImpl extends SuperServiceImpl<SysUserMapper, SysUser>
     }
 
     @Override
+    @TLogAspect({"params.page","params.limit"})
     public PageResult<SysUser> findUsers(Map<String, Object> params) {
+        log.info("test annotation TLogAspect");
         Page<SysUser> page = new Page<>(MapUtils.getInteger(params, "page"), MapUtils.getInteger(params, "limit"));
         List<SysUser> list = baseMapper.findList(page, params);
         long total = page.getTotal();
@@ -220,7 +223,9 @@ public class SysUserServiceImpl extends SuperServiceImpl<SysUserMapper, SysUser>
 
     @Transactional(rollbackFor = Exception.class)
     @Override
+    @TLogAspect({"sysUser.username","sysUser.creatorId"})
     public Result saveOrUpdateUser(SysUser sysUser) throws Exception {
+        log.info("test annotation TLogAspect");
         if (sysUser.getId() == null) {
             if (StringUtils.isBlank(sysUser.getType())) {
                 sysUser.setType(UserType.BACKEND.name());
